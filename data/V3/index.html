@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>软件与信息技术服务企业价值评估计算器 V3（σ 分层 + 毛利率加权）</title>
+<style>
+  :root { --brand:#2F6DB3; --teal:#10A37F; --gold:#B98E2F; --navy:#051C2C; --gray:#5A6B7C; --bg:#F4F7FB; --red:#C0392B; }
+  * { box-sizing:border-box; margin:0; padding:0; font-family:"Noto Sans SC","Microsoft YaHei",sans-serif; }
+  body { background:var(--bg); min-height:100vh; padding:24px 16px; }
+  .wrap { max-width:1080px; margin:0 auto; }
+  header { text-align:center; margin-bottom:20px; }
+  header h1 { font-size:24px; color:var(--navy); }
+  header p { font-size:13px; color:var(--gray); margin-top:6px; }
+  .tabs { display:flex; gap:8px; margin-bottom:16px; }
+  .tab { flex:1; padding:12px; text-align:center; border-radius:10px 10px 0 0; background:#E2E9F2; color:var(--gray); cursor:pointer; font-size:15px; font-weight:600; border-bottom:3px solid transparent; }
+  .tab.active { background:#fff; color:var(--brand); border-bottom-color:var(--brand); }
+  .card { background:#fff; border-radius:0 14px 14px 14px; padding:24px; box-shadow:0 2px 12px rgba(31,58,95,.08); margin-bottom:18px; }
+  h2 { font-size:17px; color:var(--brand); margin-bottom:14px; }
+  h2 .fm { font-weight:400; color:var(--gray); font-size:13px; }
+  .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); gap:14px; }
+  .field label { display:block; font-size:13px; color:#44576B; margin-bottom:5px; }
+  .field input { width:100%; padding:9px 11px; border:1px solid #C9D6E4; border-radius:8px; font-size:15px; }
+  .field input:focus { outline:2px solid var(--teal); border-color:var(--teal); }
+  .hint { font-size:11.5px; color:#8EA0BD; margin-top:3px; }
+  .btn { display:block; width:100%; padding:13px; background:linear-gradient(90deg,var(--brand),var(--teal)); color:#fff; font-size:16px; border:none; border-radius:10px; cursor:pointer; margin-top:12px; }
+  .btn:hover { filter:brightness(1.06); }
+  table { width:100%; border-collapse:collapse; margin:12px 0; font-size:13.5px; }
+  th { background:var(--brand); color:#fff; padding:8px 6px; text-align:center; font-weight:600; }
+  td { border:1px solid #D9E2EC; padding:7px 6px; text-align:center; color:var(--navy); }
+  td.name { text-align:left; }
+  .neg td { color:var(--red); }
+  .result-box { background:#F0F7F4; border-left:4px solid var(--teal); border-radius:8px; padding:14px 16px; margin-top:10px; }
+  .big { font-size:26px; font-weight:700; color:var(--teal); }
+  .verdict { display:inline-block; padding:3px 14px; border-radius:14px; color:#fff; font-weight:700; }
+  .v-yes { background:var(--teal); } .v-no { background:var(--red); }
+  .formula-note { font-size:12px; color:#8EA0BD; margin-top:10px; line-height:1.6; }
+  footer { text-align:center; font-size:11.5px; color:#AAB4BE; padding:14px 0 4px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>软件与信息技术服务企业价值评估计算器 V3（σ 分层 + 毛利率加权）</h1>
+    <p>V3：在 V2 基础上增加①毛利率加权 S₀（治低毛利高估）②σ 分层适配（上市个股σ/非上市可比组合σ）③σ 助手工具页</p>
+  </header>
+
+  <div class="tabs">
+    <div class="tab active" id="t1" onclick="switchTab(1)">① 突变级数法（平滑归一+均值合成）</div>
+    <div class="tab" id="t2" onclick="switchTab(2)">② B-S 实物期权（S₀=营收现值流×毛利率权重）</div>
+    <div class="tab" id="t3" onclick="switchTab(3)">③ 综合估值：C = Vp × M ×毛利权重</div>
+    <div class="tab" id="t4" onclick="switchTab(4)">④ σ 助手（个股/组合/经营波动）</div>
+  </div>
+
+  <!-- Tab1 突变级数法 -->
+  <div class="card" id="c1">
+    <h2>突变级数法 <span class="fm">蝴蝶突变系统 f(x)=x⁶/6+ax⁴/4+bx³/3+cx²/2+dx ｜ 归一公式 xa=√a₁, xb=∛b₁, xc=⁴√c₁, xd=⁵√d₁</span></h2>
+    <p style="font-size:13px;color:var(--gray);margin-bottom:12px">输入论文表1的13项三级指标原始值（无量纲化按 Xi'=(Xi−Ximin)/(Ximax−Ximin) 极差标准化；负向指标自动取 1−正向化）</p>
+    <div class="grid">
+      <div class="field"><label>资产负债率（%，负向）</label><input id="f1" type="number" value="45"><div class="hint">负债/资产</div></div>
+      <div class="field"><label>速动比率</label><input id="f2" type="number" step="0.01" value="1.8"><div class="hint">流动资产/流动负债</div></div>
+      <div class="field"><label>营运资本周转率</label><input id="f3" type="number" step="0.01" value="4.5"><div class="hint">销售收入/营运资本</div></div>
+      <div class="field"><label>应收账款周转率</label><input id="f4" type="number" step="0.01" value="6.0"><div class="hint">销售收入/应收账款</div></div>
+      <div class="field"><label>权益净利率（%）</label><input id="f5" type="number" step="0.01" value="8"><div class="hint">净利润/所有者权益</div></div>
+      <div class="field"><label>销售净利率（%）</label><input id="f6" type="number" step="0.01" value="9"><div class="hint">净利润/主营业务收入</div></div>
+      <div class="field"><label>总资产净利率（%）</label><input id="f7" type="number" step="0.01" value="4"><div class="hint">净利润/资产</div></div>
+      <div class="field"><label>研发投入/营业收入（%）</label><input id="n1" type="number" step="0.01" value="12"><div class="hint">开发支出/营业收入</div></div>
+      <div class="field"><label>员工本科以上占比（%）</label><input id="n2" type="number" step="0.01" value="70"></div>
+      <div class="field"><label>高管本科以上占比（%）</label><input id="n3" type="number" step="0.01" value="90"></div>
+      <div class="field"><label>人力资本回报率</label><input id="n4" type="number" step="0.01" value="1.2"><div class="hint">企业利润/员工薪酬福利总和</div></div>
+      <div class="field"><label>销售费用增长率（%）</label><input id="n5" type="number" step="0.01" value="10"><div class="hint">本年销售费用/上年末销售费用−1</div></div>
+    </div>
+    <div style="font-size:13px;color:var(--gray);margin-top:8px">参考区间（用于极差标准化的 min/max，可按样本调整）：
+      <input id="rng" style="width:96%;margin-top:5px;padding:6px;border:1px solid #C9D6E4;border-radius:6px;font-size:12px" value="资产负债率[0,90] 速动[0.2,3] 营运周转[0,10] 应收周转[0,15] 权益净利[-20,30] 销售净利[-30,40] 总资产净利[-10,15] 研发比[0,35] 员工本科[20,95] 高管本科[40,100] 人力回报[-1,3] 销售费增[-30,60]">
+    </div>
+    <button class="btn" onclick="calcCat()">计算突变级数综合值 M</button>
+    <div class="result-box" id="r1" style="display:none">
+      <span style="font-size:13px;color:var(--gray)">突变级数综合评价值（M）</span>
+      <div class="big" id="mval">—</div>
+      <div style="font-size:12px;color:var(--gray)" id="mdetail"></div>
+    </div>
+    <div class="formula-note">按论文：指标树 财务能力[偿债(2),营运(2),盈利(3)] + 非财务能力[智力(2),内部经营(3)]；每节点按蝴蝶突变归一（≤4控制变量，不足按"重要变量优先、缺位递补"处理），节点合成采用互补均值准则（V2 起修复）。</div>
+  </div>
+
+  <!-- Tab2 B-S -->
+  <div class="card" id="c2" style="display:none">
+    <h2>B-S 实物期权模型 <span class="fm">Vp = S₀·N(d₁) − X·e^(−rT)·N(d₂)；d₁=[ln(S₀/X)+(r+σ²/2)T]/(σ√T)；d₂=d₁−σ√T</span></h2>
+    <div class="grid">
+      <div class="field"><label>S₀ 基期营业收入（万元）</label><input id="s0" type="number" value="2548742"></div>
+      <div class="field"><label>X 企业负债总额（万元）</label><input id="x0" type="number" value="1420000"><div class="hint">论文口径：K=负债总额</div></div>
+      <div class="field"><label>σ 股票年收益波动率</label><input id="sg" type="number" step="0.01" value="0.40"></div>
+      <div class="field"><label>r 无风险利率（%）</label><input id="rr" type="number" step="0.01" value="2.5"><div class="hint">取同期国债/存款利率</div></div>
+      <div class="field"><label>g 营收增长率（%）</label><input id="gg" type="number" step="0.1" value="10"><div class="hint">增长年金用的营收增速（截断±）</div></div>
+      <div class="field"><label>公司毛利率（%）</label><input id="gm" type="number" step="0.1" value="39"><div class="hint">行业基准 39.1%（8 家中位数）</div></div>
+      <div class="field"><label>T 期限（年）</label><input id="tt" type="number" step="0.5" value="8"><div class="hint">论文取 8：行业企业平均寿命</div></div>
+    </div>
+    <button class="btn" onclick="calcBS()">计算期权价值 Vp</button>
+    <div class="result-box" id="r2" style="display:none">
+      <table><tr><th>d₁</th><th>d₂</th><th>N(d₁)</th><th>N(d₂)</th><th>Vp（万元）</th></tr>
+      <tr><td id="d1v">—</td><td id="d2v">—</td><td id="nd1">—</td><td id="nd2">—</td><td><b id="vpv" style="color:var(--teal)">—</b></td></tr></table>
+    </div>
+    <div class="formula-note">N(·) 为标准正态累积分布函数（均值0、标准差1，用 Abramowitz–Stegun 7.1.26 有理逼近实现，误差&lt;7.5e-8）。</div>
+  </div>
+
+  <!-- Tab3 综合 -->
+  <div class="card" id="c3" style="display:none">
+    <h2>综合估值 <span class="fm">C = C(S₀,T)/M —— 论文最终式：修正 B-S 值 ÷ 突变级数综合值</span></h2>
+    <div class="grid">
+      <div class="field"><label>C(S₀,T)（B-S 期权价值，万元）</label><input id="cst" type="number" value="0"></div>
+      <div class="field"><label>M（突变级数综合值）</label><input id="mv" type="number" step="0.0001" value="0.9"></div>
+      <div class="field"><label>当前市值（万元）</label><input id="mc" type="number" value="0"></div>
+    </div>
+    <button class="btn" onclick="calcC()">计算企业价值 C 并判定</button>
+    <div class="result-box" id="r3" style="display:none">
+      <span style="font-size:13px;color:var(--gray)">企业价值 C（万元）</span>
+      <div class="big" id="cval">—</div>
+      <div style="margin-top:8px;font-size:14px" id="cmp"></div>
+      <div style="margin-top:10px" id="verdict"></div>
+    </div>
+    <div class="formula-note">V2 估值带（修复④）：C/市值 &gt;1.2 深度低估｜1~1.2 低估｜0.8~1 合理｜0.5~0.8 高估｜&lt;0.5 深度高估</div>
+  </div>
+
+  <div class="card" id="c4" style="display:none">
+    <h2>σ 助手 <span class="fm">分层适配：上市→个股实际σ；非上市→可比组合中位数上浮；数据自足→经营波动×经营杠杆</span></h2>
+    <div class="grid">
+      <div class="field"><label>方式一：可比组合各司σ（逗号分隔）</label><input id="sgL" value="0.50,0.37,0.44,0.50,0.53,0.36,0.63,0.45"><div class="hint">计算中位数，非上市再上浮10-20%</div></div>
+      <div class="field"><label>上浮幅度（%）</label><input id="sgUp" type="number" value="15"><div class="hint">非上市规模/透明度折价，DLOM另走估值端</div></div>
+      <div class="field"><label>方式二：5年EBIT增速（%逗号分隔）</label><input id="ebitL" value="8,12,-5,15,10"><div class="hint">标准差即经营波动近似，×(1+固定成本占比)转资产波动</div></div>
+      <div class="field"><label>固定成本占比（%）</label><input id="fixR" type="number" value="30"></div>
+    </div>
+    <button class="btn" onclick="calcSigma()">计算 σ 并回填主模型</button>
+    <div class="result-box" id="r4" style="display:none">
+      <div id="sgOut"></div>
+    </div>
+    <div class="formula-note">本页验证批 8 家个股σ：用友0.50 东软0.37 中软0.44 浪潮0.50 金山0.53 讯飞0.36 润和0.63 太极0.45（腾讯日线498根，日对数收益年化√250）——组合中位数 0.498。</div>
+  </div>
+  <footer>计算器实现：麻小 V3 ｜ V2 全部机制 + 毛利率加权 S₀ + 个股σ ｜ 仅供研究验证用</footer>
+</div>
+<script>
+// ===== V2 修复版公式（对应验证报告四项修复）=====
+function switchTab(n) { for (let i=1;i<=4;i++){ document.getElementById('t'+i).classList.toggle('active',i===n); document.getElementById('c'+i).style.display = i===n?'block':'none'; } }
+function N(x) { const t = 1/(1+0.2316419*Math.abs(x)); const d = 0.3989422804014327*Math.exp(-x*x/2); let p = d*t*(1.330274429*t**4 - 1.821255978*t**3 + 1.781477937*t**2 - 0.356563782*t + 0.319381530); return x >= 0 ? 1-p : p; }
+function ranges() { const m = {}; document.getElementById('rng').value.split(/[\s，]+/).forEach(tok => { const mm = tok.match(/(.+?)\[([-\d.]+),([-\d.]+)\]/); if (mm) m[mm[1]] = [+mm[2], +mm[3]]; }); return m; }
+const IDX = [
+  { id:'f1', name:'资产负债率', neg:true }, { id:'f2', name:'速动比率' }, { id:'f3', name:'营运资本周转率' }, { id:'f4', name:'应收账款周转率' },
+  { id:'f5', name:'权益净利率' }, { id:'f6', name:'销售净利率' }, { id:'f7', name:'总资产净利率' },
+  { id:'n1', name:'研发投入比' }, { id:'n2', name:'员工本科占比' }, { id:'n3', name:'高管本科占比' }, { id:'n4', name:'人力资本回报率' }, { id:'n5', name:'销售费用增长率' },
+];
+// 修复③：logistic 平滑归一（下限 0.02 防零），代替 V1 极差硬归一
+function dimless(vals, rg) {
+  return IDX.map((it, i) => {
+    const r = rg[it.name] || [0, 1];
+    const mid = (r[0] + r[1]) / 2, k = 5 / ((r[1] - r[0]) / 2);
+    let z = 1 / (1 + Math.exp(-k * (vals[i] - mid)));
+    if (it.neg) z = 1 - z;
+    return Math.min(1, Math.max(0.02, z));
+  });
+}
+// 修复③：节点合成改互补均值（V1 为"大中取小"，对零值脆断）
+function butterfly(controls) {
+  const a = controls.slice(0, 4);
+  while (a.length < 4) a.push(a[a.length-1] || 1);
+  return (Math.sqrt(a[0]) + Math.cbrt(a[1]) + Math.pow(a[2], 0.25) + Math.pow(a[3], 0.2)) / 4;
+}
+function calcCat() {
+  const vals = IDX.map(it => +document.getElementById(it.id).value || 0);
+  const d = dimless(vals, ranges());
+  const debt = butterfly([d[0], d[1]]), oper = butterfly([d[2], d[3]]), prof = butterfly([d[4], d[5], d[6]]);
+  const intel = butterfly([d[7], d[8]]), internal = butterfly([d[9], d[10], d[11]]);
+  const fin = butterfly([prof, oper, debt]), nonfin = butterfly([intel, internal]);
+  let M = butterfly([fin, nonfin]);
+  M = Math.max(M, 0.3); // 修复①：M 下限截断
+  document.getElementById('r1').style.display = 'block';
+  document.getElementById('mval').textContent = M.toFixed(4);
+  document.getElementById('mdetail').textContent = '分项：财务=' + fin.toFixed(4) + ' 非财务=' + nonfin.toFixed(4) + '（V2：平滑归一+均值合成+下限0.3）';
+  document.getElementById('mv').value = M.toFixed(4);
+}
+// 修复②：S₀ 改营收增长年金现值（V1 为账面资产总额）
+function revPV(rev, g, r, T) { g = Math.min(0.30, Math.max(-0.10, g)); if (Math.abs(r-g) < 0.001) return rev*(1+g)*T; return rev*(1+g)*(1-Math.pow((1+g)/(1+r),T))/(r-g); }
+function calcBS() {
+  const revIn = +document.getElementById('s0').value, X = +document.getElementById('x0').value;
+  const sg = +document.getElementById('sg').value, r = (+document.getElementById('rr').value)/100, T = +document.getElementById('tt').value;
+  if (revIn <= 0 || X <= 0 || sg <= 0 || T <= 0) { alert('参数需为正'); return; }
+  const gg=(+document.getElementById('gg').value||0)/100; const gm=(+document.getElementById('gm').value||39)/100; const mw=Math.min(1.5,Math.max(0.6,gm/0.391)); const S0 = revPV(revIn, gg, r, T)*mw; const d1 = (Math.log(S0/X) + (r + sg*sg/2)*T) / (sg*Math.sqrt(T));
+  const d2 = d1 - sg*Math.sqrt(T);
+  const vp = S0*N(d1) - X*Math.exp(-r*T)*N(d2);
+  document.getElementById('r2').style.display = 'block';
+  document.getElementById('d1v').textContent = d1.toFixed(4); document.getElementById('d2v').textContent = d2.toFixed(4);
+  document.getElementById('nd1').textContent = N(d1).toFixed(6); document.getElementById('nd2').textContent = N(d2).toFixed(6);
+  document.getElementById('vpv').textContent = vp.toFixed(0);
+  document.getElementById('cst').value = vp.toFixed(0);
+}
+// 修复①：C = Vp × M（V1 为 Vp/M，质量越差估值越高的悖论）；修复④：估值带判定
+function calcSigma() {
+    const L = (document.getElementById('sgL').value.split(',').map(Number)).filter(v=>v>0);
+    L.sort((a,b)=>a-b); const med = L[Math.floor(L.length/2)];
+    const up = (+document.getElementById('sgUp').value||0)/100;
+    const sgComp = med*(1+up);
+    const E = document.getElementById('ebitL').value.split(',').map(Number).filter(v=>!isNaN(v));
+    const mean = E.reduce((a,b)=>a+b,0)/E.length;
+    const sd = Math.sqrt(E.reduce((a,b)=>a+(b-mean)**2,0)/(E.length-1));
+    const lev = 1+(+document.getElementById('fixR').value||0)/100;
+    const sgOp = (sd/100)*lev;
+    document.getElementById('r4').style.display='block';
+    document.getElementById('sgOut').innerHTML = '可比组合中位数 σ = <b>'+med.toFixed(3)+'</b> → 非上市上浮后 <b style="color:#10A37F">'+sgComp.toFixed(3)+'</b><br>经营波动法 σ = EBIT增速标准差 '+sd.toFixed(1)+'% × 经营杠杆 '+lev.toFixed(2)+' = <b style="color:#10A37F">'+sgOp.toFixed(3)+'</b><br><span style="font-size:12px;color:#8EA0BD">建议取两法结果均值回填；已回填方式一（上浮后）</span>';
+    document.getElementById('sg').value = sgComp.toFixed(2);
+  }
+  function calcC() {
+  const cst = +document.getElementById('cst').value, M = +document.getElementById('mv').value, mc = +document.getElementById('mc').value;
+  if (M <= 0) { alert('M 需为正'); return; }
+  const mw3=Math.min(1.5,Math.max(0.6,(+document.getElementById("gm").value||39)/100/0.391)); const C = cst * M * mw3;
+  const ratio = mc > 0 ? C/mc : NaN;
+  let band, cls;
+  if (ratio > 1.2) { band = '深度低估'; cls = 'v-yes'; } else if (ratio > 1) { band = '低估'; cls = 'v-yes'; }
+  else if (ratio > 0.8) { band = '合理区间'; cls = 'v-neutral'; } else if (ratio > 0.5) { band = '高估'; cls = 'v-no'; } else { band = '深度高估'; cls = 'v-no'; }
+  document.getElementById('r3').style.display = 'block';
+  document.getElementById('cval').textContent = C.toFixed(0);
+  document.getElementById('cmp').innerHTML = 'C / 市值 = <b>' + (isNaN(ratio)?'—':ratio.toFixed(2)) + '</b>（毛利权重 ×' + mw3.toFixed(2) + '）';
+  document.getElementById('verdict').innerHTML = '<span class="verdict ' + cls + '" style="' + (cls==='v-neutral'?'background:#8EA0BD;':'') + '">' + band + '</span>';
+}
+</script>
+</body>
+</html>

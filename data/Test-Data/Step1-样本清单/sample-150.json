@@ -1,0 +1,1297 @@
+{
+  "generatedAt": "2026-09-22",
+  "method": "按市值降序 15 档 × 每档 10 家 = 150 家（每档10家字面，档数扩至15；H股扩容源仅中软国际/金蝶国际可用，其余 H 股行情接口未覆盖，如实记录）",
+  "total": 150,
+  "tiers": [
+    {
+      "tier": 1,
+      "range": "1583.3亿 ~ 391.5亿",
+      "companies": [
+        {
+          "name": "同花顺",
+          "code": "sz300033",
+          "board": "创业板",
+          "marketCapYi": 1583.3,
+          "listDate": "",
+          "industry": "软件与信息技术服务"
+        },
+        {
+          "name": "金山办公",
+          "code": "sh688111",
+          "board": "科创板",
+          "marketCapYi": 1073.4,
+          "listDate": "",
+          "industry": "软件开发"
+        },
+        {
+          "name": "科大讯飞",
+          "code": "sz002230",
+          "board": "A股",
+          "marketCapYi": 939.7,
+          "listDate": "",
+          "industry": "软件开发"
+        },
+        {
+          "name": "中控技术",
+          "code": "sh688777",
+          "board": "科创板",
+          "marketCapYi": 646.6,
+          "listDate": "",
+          "industry": "软件与信息技术服务"
+        },
+        {
+          "name": "三六零",
+          "code": "sh601360",
+          "board": "A股",
+          "marketCapYi": 642.6,
+          "listDate": "",
+          "industry": "软件与信息技术服务"
+        },
+        {
+          "name": "宝信软件",
+          "code": "sh600845",
+          "board": "A股",
+          "marketCapYi": 527.3,
+          "listDate": "",
+          "industry": "IT服务Ⅱ"
+        },
+        {
+          "name": "指南针",
+          "code": "sz300803",
+          "board": "创业板",
+          "marketCapYi": 517.3,
+          "listDate": "",
+          "industry": "软件与信息技术服务"
+        },
+        {
+          "name": "华大九天",
+          "code": "sz301269",
+          "board": "创业板",
+          "marketCapYi": 491.1,
+          "listDate": "",
+          "industry": "软件与信息技术服务"
+        },
+        {
+          "name": "网宿科技",
+          "code": "sz300017",
+          "board": "创业板",
+          "marketCapYi": 397.3,
+          "listDate": "",
+          "industry": "软件与信息技术服务"
+        },
+        {
+          "name": "软通动力",
+          "code": "sz301236",
+          "board": "创业板",
+          "marketCapYi": 391.5,
+          "listDate": "",
+          "industry": "IT服务Ⅱ"
+        }
+      ]
+    },
+    {
+      "tier": 2,
+      "range": "388.2亿 ~ 240.4亿",
+      "companies": [
+        {
+          "name": "恒生电子",
+          "code": "sh600570",
+          "board": "A股",
+          "marketCapYi": 388.2,
+          "listDate": "",
+          "industry": "软件开发"
+        },
+        {
+          "name": "用友网络",
+          "code": "sh600588",
+          "board": "A股",
+          "marketCapYi": 338.3,
+          "listDate": "",
+          "industry": "软件开发"
+        },
+        {
+          "name": "拓维信息",
+          "code": "sz002261",
+          "board": "A股",
+          "marketCapYi": 326.1,
+          "listDate": "",
+          "industry": "软件与信息技术服务"
+        },
+        {
+          "name": "中国软件",
+          "code": "sh600536",
+          "board": "A股",
+          "marketCapYi": 299.8,
+          "listDate": "",
+          "industry": "IT服务Ⅱ"
+        },
+        {
+          "name": "财富趋势",
+          "code": "sh688318",
+          "board": "科创板",
+          "marketCapYi": 294.6,
+          "listDate": "",
+          "industry": "软件与信息技术服务"
+        },
+        {
+          "name": "润和软件",
+          "code": "sz300339",
+          "board": "创业板",
+          "marketCapYi": 279.9,
+          "listDate": "",
+          "industry": "IT服务Ⅱ"
+        },
+        {
+          "name": "金蝶国际",
+          "code": "hk00268",
+          "board": "H股",
+          "marketCapYi": 276.8,
+          "listDate": "",
+          "industry": "软件与信息技术服务"
+        },
+        {
+          "name": "中科创达",
+          "code": "sz300496",
+          "board": "创业板",
+          "marketCapYi": 261.3,
+          "listDate": "",
+          "industry": "IT服务Ⅱ"
+        },
+        {
+          "name": "中科星图",
+          "code": "sh688568",
+          "board": "科创板",
+          "marketCapYi": 253,
+          "listDate": "",
+          "industry": "软件与信息技术服务"
+        },
+        {
+          "name": "神州数码",
+          "code": "sz000034",
+          "board": "A股",
+          "marketCapYi": 240.4,
+          "listDate": "",
+          "industry": "软件与信息技术服务"
+        }
+      ]
+    },
+    {
+      "tier": 3,
+      "range": "239.1亿 ~ 200.2亿",
+      "companies": [
+        {
+          "name": "云天励飞",
+          "code": "sh688343",
+          "board": "科创板",
+          "marketCapYi": 239.1,
+          "listDate": "",
+          "industry": "软件与信息技术服务"
+        },
+        {
+          "name": "达梦数据",
+          "code": "sh688692",
+          "board": "科创板",
+          "marketCapYi": 237.7,
+          "listDate": "",
+          "industry": "软件与信息技术服务"
+        },
+        {
+          "name": "银之杰",
+          "code": "sz300085",
+          "board": "创业板",
+          "marketCapYi": 224.1,
+          "listDate": "",
+          "industry": "软件与信息技术服务"
+        },
+        {
+          "name": "东华软件",
+          "code": "sz002065",
+          "board": "A股",
+          "marketCapYi": 218,
+          "listDate": "",
+          "industry": "IT服务Ⅱ"
+        },
+        {
+          "name": "数据港",
+          "code": "sh603881",
+          "board": "A股",
+          "marketCapYi": 216.7,
+          "listDate": "",
+          "industry": "软件与信息技术服务"
+        },
+        {
+          "name": "石基信息",
+          "code": "sz002153",
+          "board": "A股",
+          "marketCapYi": 215.9,
+          "listDate": "",
+          "industry": "软件与信息技术服务"
+        },
+        {
+          "name": "光环新网",
+          "code": "sz300383",
+          "board": "创业板",
+          "marketCapYi": 206,
+          "listDate": "",
+          "industry": "软件与信息技术服务"
+        },
+        {
+          "name": "奇安信",
+          "code": "sh688561",
+          "board": "科创板",
+          "marketCapYi": 204.6,
+          "listDate": "",
+          "industry": "软件开发"
+        },
+        {
+          "name": "概伦电子",
+          "code": "sh688206",
+          "board": "科创板",
+          "marketCapYi": 202.1,
+          "listDate": "",
+          "industry": "软件与信息技术服务"
+        },
+        {
+          "name": "新大陆",
+          "code": "sz000997",
+          "board": "A股",
+          "marketCapYi": 200.2,
+          "listDate": "",
+          "industry": "软件与信息技术服务"
+        }
+      ]
+    },
+    {
+      "tier": 4,
+      "range": "197.5亿 ~ 162.3亿",
+      "companies": [
+        {
+          "name": "奥飞数据",
+          "code": "sz300738",
+          "board": "创业板",
+          "marketCapYi": 197.5,
+          "listDate": "",
+          "industry": "软件与信息技术服务"
+        },
+        {
+          "name": "合合信息",
+          "code": "sh688615",
+          "board": "科创板",
+          "marketCapYi": 183.2,
+          "listDate": "",
+          "industry": "软件与信息技术服务"
+        },
+        {
+          "name": "华胜天成",
+          "code": "sh600410",
+          "board": "A股",
+          "marketCapYi": 180.7,
+          "listDate": "",
+          "industry": "软件与信息技术服务"
+        },
+        {
+          "name": "大智慧",
+          "code": "sh601519",
+          "board": "A股",
+          "marketCapYi": 180.4,
+          "listDate": "",
+          "industry": "软件与信息技术服务"
+        },
+        {
+          "name": "启明星辰",
+          "code": "sz002439",
+          "board": "A股",
+          "marketCapYi": 177.9,
+          "listDate": "",
+          "industry": "软件开发"
+        },
+        {
+          "name": "深桑达A",
+          "code": "sz000032",
+          "board": "A股",
+          "marketCapYi": 176.2,
+          "listDate": "",
+          "industry": "软件与信息技术服务"
+        },
+        {
+          "name": "汉得信息",
+          "code": "sz300170",
+          "board": "创业板",
+          "marketCapYi": 168.6,
+          "listDate": "",
+          "industry": "软件与信息技术服务"
+        },
+        {
+          "name": "拉卡拉",
+          "code": "sz300773",
+          "board": "创业板",
+          "marketCapYi": 166.9,
+          "listDate": "",
+          "industry": "软件与信息技术服务"
+        },
+        {
+          "name": "神州泰岳",
+          "code": "sz300002",
+          "board": "创业板",
+          "marketCapYi": 162.5,
+          "listDate": "",
+          "industry": "软件与信息技术服务"
+        },
+        {
+          "name": "慧博云通",
+          "code": "sz301316",
+          "board": "创业板",
+          "marketCapYi": 162.3,
+          "listDate": "",
+          "industry": "软件与信息技术服务"
+        }
+      ]
+    },
+    {
+      "tier": 5,
+      "range": "157.4亿 ~ 139.1亿",
+      "companies": [
+        {
+          "name": "卫宁健康",
+          "code": "sz300253",
+          "board": "创业板",
+          "marketCapYi": 157.4,
+          "listDate": "",
+          "industry": "软件开发"
+        },
+        {
+          "name": "广立微",
+          "code": "sz301095",
+          "board": "创业板",
+          "marketCapYi": 154.8,
+          "listDate": "",
+          "industry": "软件与信息技术服务"
+        },
+        {
+          "name": "润建股份",
+          "code": "sz002929",
+          "board": "A股",
+          "marketCapYi": 152.8,
+          "listDate": "",
+          "industry": "软件与信息技术服务"
+        },
+        {
+          "name": "星环科技",
+          "code": "sh688031",
+          "board": "科创板",
+          "marketCapYi": 150.4,
+          "listDate": "",
+          "industry": "软件与信息技术服务"
+        },
+        {
+          "name": "云涌科技",
+          "code": "sh688106",
+          "board": "科创板",
+          "marketCapYi": 145.6,
+          "listDate": "",
+          "industry": "软件与信息技术服务"
+        },
+        {
+          "name": "四维图新",
+          "code": "sz002405",
+          "board": "A股",
+          "marketCapYi": 145.5,
+          "listDate": "",
+          "industry": "软件与信息技术服务"
+        },
+        {
+          "name": "东方国信",
+          "code": "sz300166",
+          "board": "创业板",
+          "marketCapYi": 143.3,
+          "listDate": "",
+          "industry": "软件与信息技术服务"
+        },
+        {
+          "name": "广联达",
+          "code": "sz002410",
+          "board": "A股",
+          "marketCapYi": 142.4,
+          "listDate": "",
+          "industry": "软件开发"
+        },
+        {
+          "name": "优刻得",
+          "code": "sh688158",
+          "board": "科创板",
+          "marketCapYi": 142,
+          "listDate": "",
+          "industry": "软件与信息技术服务"
+        },
+        {
+          "name": "盛视科技",
+          "code": "sz002990",
+          "board": "A股",
+          "marketCapYi": 139.1,
+          "listDate": "",
+          "industry": "软件与信息技术服务"
+        }
+      ]
+    },
+    {
+      "tier": 6,
+      "range": "129亿 ~ 107.8亿",
+      "companies": [
+        {
+          "name": "索辰科技",
+          "code": "sh688507",
+          "board": "科创板",
+          "marketCapYi": 129,
+          "listDate": "",
+          "industry": "软件与信息技术服务"
+        },
+        {
+          "name": "电科网安",
+          "code": "sz002268",
+          "board": "A股",
+          "marketCapYi": 127.8,
+          "listDate": "",
+          "industry": "软件与信息技术服务"
+        },
+        {
+          "name": "航天信息",
+          "code": "sh600271",
+          "board": "A股",
+          "marketCapYi": 126.2,
+          "listDate": "",
+          "industry": "软件与信息技术服务"
+        },
+        {
+          "name": "赛意信息",
+          "code": "sz300687",
+          "board": "创业板",
+          "marketCapYi": 125.4,
+          "listDate": "",
+          "industry": "软件与信息技术服务"
+        },
+        {
+          "name": "泛微网络",
+          "code": "sh603039",
+          "board": "A股",
+          "marketCapYi": 122.1,
+          "listDate": "",
+          "industry": "软件开发"
+        },
+        {
+          "name": "拓尔思",
+          "code": "sz300229",
+          "board": "创业板",
+          "marketCapYi": 120,
+          "listDate": "",
+          "industry": "软件开发"
+        },
+        {
+          "name": "宇信科技",
+          "code": "sz300674",
+          "board": "创业板",
+          "marketCapYi": 118.6,
+          "listDate": "",
+          "industry": "软件与信息技术服务"
+        },
+        {
+          "name": "千方科技",
+          "code": "sz002373",
+          "board": "A股",
+          "marketCapYi": 118.4,
+          "listDate": "",
+          "industry": "软件与信息技术服务"
+        },
+        {
+          "name": "京北方",
+          "code": "sz002987",
+          "board": "A股",
+          "marketCapYi": 115.9,
+          "listDate": "",
+          "industry": "软件开发"
+        },
+        {
+          "name": "赢时胜",
+          "code": "sz300377",
+          "board": "创业板",
+          "marketCapYi": 107.8,
+          "listDate": "",
+          "industry": "软件与信息技术服务"
+        }
+      ]
+    },
+    {
+      "tier": 7,
+      "range": "106.9亿 ~ 102亿",
+      "companies": [
+        {
+          "name": "焦点科技",
+          "code": "sz002315",
+          "board": "A股",
+          "marketCapYi": 106.9,
+          "listDate": "",
+          "industry": "软件与信息技术服务"
+        },
+        {
+          "name": "鼎捷软件",
+          "code": "sz300378",
+          "board": "创业板",
+          "marketCapYi": 106.4,
+          "listDate": "",
+          "industry": "软件与信息技术服务"
+        },
+        {
+          "name": "云从科技",
+          "code": "sh688327",
+          "board": "科创板",
+          "marketCapYi": 106.4,
+          "listDate": "",
+          "industry": "软件与信息技术服务"
+        },
+        {
+          "name": "中软国际",
+          "code": "hk00354",
+          "board": "H股",
+          "marketCapYi": 106,
+          "listDate": "",
+          "industry": "软件与信息技术服务"
+        },
+        {
+          "name": "新国都",
+          "code": "sz300130",
+          "board": "创业板",
+          "marketCapYi": 104.6,
+          "listDate": "",
+          "industry": "软件与信息技术服务"
+        },
+        {
+          "name": "首都在线",
+          "code": "sz300846",
+          "board": "创业板",
+          "marketCapYi": 103.2,
+          "listDate": "",
+          "industry": "软件与信息技术服务"
+        },
+        {
+          "name": "远光软件",
+          "code": "sz002063",
+          "board": "A股",
+          "marketCapYi": 103,
+          "listDate": "",
+          "industry": "软件与信息技术服务"
+        },
+        {
+          "name": "神州信息",
+          "code": "sz000555",
+          "board": "A股",
+          "marketCapYi": 102.8,
+          "listDate": "",
+          "industry": "IT服务Ⅱ"
+        },
+        {
+          "name": "金证股份",
+          "code": "sh600446",
+          "board": "A股",
+          "marketCapYi": 102.6,
+          "listDate": "",
+          "industry": "软件与信息技术服务"
+        },
+        {
+          "name": "万兴科技",
+          "code": "sz300624",
+          "board": "创业板",
+          "marketCapYi": 102,
+          "listDate": "",
+          "industry": "软件与信息技术服务"
+        }
+      ]
+    },
+    {
+      "tier": 8,
+      "range": "100.5亿 ~ 80.3亿",
+      "companies": [
+        {
+          "name": "彩讯股份",
+          "code": "sz300634",
+          "board": "创业板",
+          "marketCapYi": 100.5,
+          "listDate": "",
+          "industry": "软件与信息技术服务"
+        },
+        {
+          "name": "迪普科技",
+          "code": "sz300768",
+          "board": "创业板",
+          "marketCapYi": 98.2,
+          "listDate": "",
+          "industry": "软件与信息技术服务"
+        },
+        {
+          "name": "东软集团",
+          "code": "sh600718",
+          "board": "A股",
+          "marketCapYi": 97.5,
+          "listDate": "",
+          "industry": "IT服务Ⅱ"
+        },
+        {
+          "name": "佳都科技",
+          "code": "sh600728",
+          "board": "A股",
+          "marketCapYi": 97.5,
+          "listDate": "",
+          "industry": "软件与信息技术服务"
+        },
+        {
+          "name": "美亚柏科",
+          "code": "sz300188",
+          "board": "创业板",
+          "marketCapYi": 92.4,
+          "listDate": "",
+          "industry": "软件与信息技术服务"
+        },
+        {
+          "name": "中望软件",
+          "code": "sh688083",
+          "board": "科创板",
+          "marketCapYi": 89.1,
+          "listDate": "",
+          "industry": "软件开发"
+        },
+        {
+          "name": "品高股份",
+          "code": "sh688227",
+          "board": "科创板",
+          "marketCapYi": 88.1,
+          "listDate": "",
+          "industry": "软件与信息技术服务"
+        },
+        {
+          "name": "天融信",
+          "code": "sz002212",
+          "board": "A股",
+          "marketCapYi": 86.3,
+          "listDate": "",
+          "industry": "软件与信息技术服务"
+        },
+        {
+          "name": "太极股份",
+          "code": "sz002368",
+          "board": "A股",
+          "marketCapYi": 83.6,
+          "listDate": "",
+          "industry": "IT服务Ⅱ"
+        },
+        {
+          "name": "绿盟科技",
+          "code": "sz300369",
+          "board": "创业板",
+          "marketCapYi": 80.3,
+          "listDate": "",
+          "industry": "软件开发"
+        }
+      ]
+    },
+    {
+      "tier": 9,
+      "range": "79亿 ~ 65.5亿",
+      "companies": [
+        {
+          "name": "长亮科技",
+          "code": "sz300348",
+          "board": "创业板",
+          "marketCapYi": 79,
+          "listDate": "",
+          "industry": "软件开发"
+        },
+        {
+          "name": "天阳宏业",
+          "code": "sz300872",
+          "board": "创业板",
+          "marketCapYi": 77.4,
+          "listDate": "",
+          "industry": "软件与信息技术服务"
+        },
+        {
+          "name": "值得买",
+          "code": "sz300785",
+          "board": "创业板",
+          "marketCapYi": 74.9,
+          "listDate": "",
+          "industry": "软件与信息技术服务"
+        },
+        {
+          "name": "恒为科技",
+          "code": "sh603496",
+          "board": "A股",
+          "marketCapYi": 74.4,
+          "listDate": "",
+          "industry": "软件与信息技术服务"
+        },
+        {
+          "name": "亚康股份",
+          "code": "sz301085",
+          "board": "创业板",
+          "marketCapYi": 74.3,
+          "listDate": "",
+          "industry": "软件与信息技术服务"
+        },
+        {
+          "name": "光云科技",
+          "code": "sh688365",
+          "board": "科创板",
+          "marketCapYi": 71.2,
+          "listDate": "",
+          "industry": "软件与信息技术服务"
+        },
+        {
+          "name": "万达信息",
+          "code": "sz300168",
+          "board": "创业板",
+          "marketCapYi": 70.2,
+          "listDate": "",
+          "industry": "IT服务Ⅱ"
+        },
+        {
+          "name": "二六三",
+          "code": "sz002467",
+          "board": "A股",
+          "marketCapYi": 70,
+          "listDate": "",
+          "industry": "软件与信息技术服务"
+        },
+        {
+          "name": "中电兴发",
+          "code": "sz002298",
+          "board": "A股",
+          "marketCapYi": 66.4,
+          "listDate": "",
+          "industry": "软件与信息技术服务"
+        },
+        {
+          "name": "数字政通",
+          "code": "sz300075",
+          "board": "创业板",
+          "marketCapYi": 65.5,
+          "listDate": "",
+          "industry": "软件与信息技术服务"
+        }
+      ]
+    },
+    {
+      "tier": 10,
+      "range": "62.6亿 ~ 56.1亿",
+      "companies": [
+        {
+          "name": "中科江南",
+          "code": "sz301153",
+          "board": "创业板",
+          "marketCapYi": 62.6,
+          "listDate": "",
+          "industry": "软件与信息技术服务"
+        },
+        {
+          "name": "麦迪科技",
+          "code": "sh603990",
+          "board": "A股",
+          "marketCapYi": 60.8,
+          "listDate": "",
+          "industry": "软件与信息技术服务"
+        },
+        {
+          "name": "久其软件",
+          "code": "sz002279",
+          "board": "A股",
+          "marketCapYi": 60.4,
+          "listDate": "",
+          "industry": "软件与信息技术服务"
+        },
+        {
+          "name": "天源迪科",
+          "code": "sz300047",
+          "board": "创业板",
+          "marketCapYi": 59.4,
+          "listDate": "",
+          "industry": "软件与信息技术服务"
+        },
+        {
+          "name": "易华录",
+          "code": "sz300212",
+          "board": "创业板",
+          "marketCapYi": 58.3,
+          "listDate": "",
+          "industry": "软件与信息技术服务"
+        },
+        {
+          "name": "品茗科技",
+          "code": "sh688109",
+          "board": "科创板",
+          "marketCapYi": 57.9,
+          "listDate": "",
+          "industry": "软件与信息技术服务"
+        },
+        {
+          "name": "开普云",
+          "code": "sh688228",
+          "board": "科创板",
+          "marketCapYi": 57.6,
+          "listDate": "",
+          "industry": "软件与信息技术服务"
+        },
+        {
+          "name": "顶点软件",
+          "code": "sh603383",
+          "board": "A股",
+          "marketCapYi": 56.9,
+          "listDate": "",
+          "industry": "软件与信息技术服务"
+        },
+        {
+          "name": "博彦科技",
+          "code": "sz002649",
+          "board": "A股",
+          "marketCapYi": 56.3,
+          "listDate": "",
+          "industry": "IT服务Ⅱ"
+        },
+        {
+          "name": "海天瑞声",
+          "code": "sh688787",
+          "board": "科创板",
+          "marketCapYi": 56.1,
+          "listDate": "",
+          "industry": "软件与信息技术服务"
+        }
+      ]
+    },
+    {
+      "tier": 11,
+      "range": "54.5亿 ~ 49.9亿",
+      "companies": [
+        {
+          "name": "华是科技",
+          "code": "sz301218",
+          "board": "创业板",
+          "marketCapYi": 54.5,
+          "listDate": "",
+          "industry": "软件与信息技术服务"
+        },
+        {
+          "name": "南天信息",
+          "code": "sz000948",
+          "board": "A股",
+          "marketCapYi": 53.9,
+          "listDate": "",
+          "industry": "软件与信息技术服务"
+        },
+        {
+          "name": "中科金财",
+          "code": "sz002657",
+          "board": "A股",
+          "marketCapYi": 53.6,
+          "listDate": "",
+          "industry": "软件与信息技术服务"
+        },
+        {
+          "name": "格灵深瞳",
+          "code": "sh688207",
+          "board": "科创板",
+          "marketCapYi": 52.8,
+          "listDate": "",
+          "industry": "软件与信息技术服务"
+        },
+        {
+          "name": "久远银海",
+          "code": "sz002777",
+          "board": "A股",
+          "marketCapYi": 52.4,
+          "listDate": "",
+          "industry": "软件与信息技术服务"
+        },
+        {
+          "name": "佳发教育",
+          "code": "sz300559",
+          "board": "创业板",
+          "marketCapYi": 52.3,
+          "listDate": "",
+          "industry": "软件与信息技术服务"
+        },
+        {
+          "name": "高伟达",
+          "code": "sz300465",
+          "board": "创业板",
+          "marketCapYi": 51.6,
+          "listDate": "",
+          "industry": "软件与信息技术服务"
+        },
+        {
+          "name": "超图软件",
+          "code": "sz300036",
+          "board": "创业板",
+          "marketCapYi": 51.3,
+          "listDate": "",
+          "industry": "软件与信息技术服务"
+        },
+        {
+          "name": "安恒信息",
+          "code": "sh688023",
+          "board": "科创板",
+          "marketCapYi": 50,
+          "listDate": "",
+          "industry": "软件与信息技术服务"
+        },
+        {
+          "name": "优博讯",
+          "code": "sz300531",
+          "board": "创业板",
+          "marketCapYi": 49.9,
+          "listDate": "",
+          "industry": "软件与信息技术服务"
+        }
+      ]
+    },
+    {
+      "tier": 12,
+      "range": "49.5亿 ~ 42.9亿",
+      "companies": [
+        {
+          "name": "直真科技",
+          "code": "sz003007",
+          "board": "A股",
+          "marketCapYi": 49.5,
+          "listDate": "",
+          "industry": "软件与信息技术服务"
+        },
+        {
+          "name": "信雅达",
+          "code": "sh600571",
+          "board": "A股",
+          "marketCapYi": 49.4,
+          "listDate": "",
+          "industry": "软件与信息技术服务"
+        },
+        {
+          "name": "浪潮软件",
+          "code": "sh600756",
+          "board": "A股",
+          "marketCapYi": 49.2,
+          "listDate": "",
+          "industry": "IT服务Ⅱ"
+        },
+        {
+          "name": "安博通",
+          "code": "sh688168",
+          "board": "科创板",
+          "marketCapYi": 49.2,
+          "listDate": "",
+          "industry": "软件与信息技术服务"
+        },
+        {
+          "name": "今天国际",
+          "code": "sz300532",
+          "board": "创业板",
+          "marketCapYi": 47.3,
+          "listDate": "",
+          "industry": "软件与信息技术服务"
+        },
+        {
+          "name": "飞天诚信",
+          "code": "sz300386",
+          "board": "创业板",
+          "marketCapYi": 47.2,
+          "listDate": "",
+          "industry": "软件与信息技术服务"
+        },
+        {
+          "name": "中远海科",
+          "code": "sz002401",
+          "board": "A股",
+          "marketCapYi": 45.6,
+          "listDate": "",
+          "industry": "软件与信息技术服务"
+        },
+        {
+          "name": "三未信安",
+          "code": "sh688489",
+          "board": "科创板",
+          "marketCapYi": 44.1,
+          "listDate": "",
+          "industry": "软件与信息技术服务"
+        },
+        {
+          "name": "容知日新",
+          "code": "sh688768",
+          "board": "科创板",
+          "marketCapYi": 43,
+          "listDate": "",
+          "industry": "软件与信息技术服务"
+        },
+        {
+          "name": "北信源",
+          "code": "sz300352",
+          "board": "创业板",
+          "marketCapYi": 42.9,
+          "listDate": "",
+          "industry": "软件与信息技术服务"
+        }
+      ]
+    },
+    {
+      "tier": 13,
+      "range": "42.1亿 ~ 38.2亿",
+      "companies": [
+        {
+          "name": "熙菱信息",
+          "code": "sz300588",
+          "board": "创业板",
+          "marketCapYi": 42.1,
+          "listDate": "",
+          "industry": "软件与信息技术服务"
+        },
+        {
+          "name": "先进数通",
+          "code": "sz300541",
+          "board": "创业板",
+          "marketCapYi": 41.7,
+          "listDate": "",
+          "industry": "软件与信息技术服务"
+        },
+        {
+          "name": "任子行",
+          "code": "sz300311",
+          "board": "创业板",
+          "marketCapYi": 41.2,
+          "listDate": "",
+          "industry": "软件与信息技术服务"
+        },
+        {
+          "name": "生意宝",
+          "code": "sz002095",
+          "board": "A股",
+          "marketCapYi": 41,
+          "listDate": "",
+          "industry": "软件与信息技术服务"
+        },
+        {
+          "name": "榕基软件",
+          "code": "sz002474",
+          "board": "A股",
+          "marketCapYi": 40.8,
+          "listDate": "",
+          "industry": "软件与信息技术服务"
+        },
+        {
+          "name": "汉王科技",
+          "code": "sz002362",
+          "board": "A股",
+          "marketCapYi": 40.4,
+          "listDate": "",
+          "industry": "软件与信息技术服务"
+        },
+        {
+          "name": "佳讯飞鸿",
+          "code": "sz300213",
+          "board": "创业板",
+          "marketCapYi": 39.5,
+          "listDate": "",
+          "industry": "软件与信息技术服务"
+        },
+        {
+          "name": "京天利",
+          "code": "sz300399",
+          "board": "创业板",
+          "marketCapYi": 39.5,
+          "listDate": "",
+          "industry": "软件与信息技术服务"
+        },
+        {
+          "name": "立昂技术",
+          "code": "sz300603",
+          "board": "创业板",
+          "marketCapYi": 38.4,
+          "listDate": "",
+          "industry": "软件与信息技术服务"
+        },
+        {
+          "name": "科蓝软件",
+          "code": "sz300663",
+          "board": "创业板",
+          "marketCapYi": 38.2,
+          "listDate": "",
+          "industry": "软件与信息技术服务"
+        }
+      ]
+    },
+    {
+      "tier": 14,
+      "range": "38亿 ~ 35亿",
+      "companies": [
+        {
+          "name": "麒麟信安",
+          "code": "sh688152",
+          "board": "科创板",
+          "marketCapYi": 38,
+          "listDate": "",
+          "industry": "软件与信息技术服务"
+        },
+        {
+          "name": "新晨科技",
+          "code": "sz300542",
+          "board": "创业板",
+          "marketCapYi": 37.9,
+          "listDate": "",
+          "industry": "软件与信息技术服务"
+        },
+        {
+          "name": "格尔软件",
+          "code": "sh603232",
+          "board": "A股",
+          "marketCapYi": 37.7,
+          "listDate": "",
+          "industry": "软件与信息技术服务"
+        },
+        {
+          "name": "当虹科技",
+          "code": "sh688039",
+          "board": "科创板",
+          "marketCapYi": 37.7,
+          "listDate": "",
+          "industry": "软件与信息技术服务"
+        },
+        {
+          "name": "银信科技",
+          "code": "sz300231",
+          "board": "创业板",
+          "marketCapYi": 37.2,
+          "listDate": "",
+          "industry": "软件与信息技术服务"
+        },
+        {
+          "name": "和仁科技",
+          "code": "sz300550",
+          "board": "创业板",
+          "marketCapYi": 36.8,
+          "listDate": "",
+          "industry": "软件与信息技术服务"
+        },
+        {
+          "name": "竞业达",
+          "code": "sz003005",
+          "board": "A股",
+          "marketCapYi": 36.2,
+          "listDate": "",
+          "industry": "软件与信息技术服务"
+        },
+        {
+          "name": "华宇软件",
+          "code": "sz300272",
+          "board": "创业板",
+          "marketCapYi": 35.9,
+          "listDate": "",
+          "industry": "软件与信息技术服务"
+        },
+        {
+          "name": "山石网科",
+          "code": "sh688030",
+          "board": "科创板",
+          "marketCapYi": 35,
+          "listDate": "",
+          "industry": "软件与信息技术服务"
+        },
+        {
+          "name": "吉大正元",
+          "code": "sz003029",
+          "board": "A股",
+          "marketCapYi": 35,
+          "listDate": "",
+          "industry": "软件与信息技术服务"
+        }
+      ]
+    },
+    {
+      "tier": 15,
+      "range": "32亿 ~ 23.4亿",
+      "companies": [
+        {
+          "name": "山大地纬",
+          "code": "sh688579",
+          "board": "科创板",
+          "marketCapYi": 32,
+          "listDate": "",
+          "industry": "软件与信息技术服务"
+        },
+        {
+          "name": "会畅通讯",
+          "code": "sz300578",
+          "board": "创业板",
+          "marketCapYi": 31.2,
+          "listDate": "",
+          "industry": "软件与信息技术服务"
+        },
+        {
+          "name": "德生科技",
+          "code": "sz002908",
+          "board": "A股",
+          "marketCapYi": 30.8,
+          "listDate": "",
+          "industry": "软件与信息技术服务"
+        },
+        {
+          "name": "银江技术",
+          "code": "sz300020",
+          "board": "创业板",
+          "marketCapYi": 30.6,
+          "listDate": "",
+          "industry": "软件与信息技术服务"
+        },
+        {
+          "name": "皖通科技",
+          "code": "sz002331",
+          "board": "A股",
+          "marketCapYi": 29.6,
+          "listDate": "",
+          "industry": "软件与信息技术服务"
+        },
+        {
+          "name": "中孚信息",
+          "code": "sz300659",
+          "board": "创业板",
+          "marketCapYi": 29.1,
+          "listDate": "",
+          "industry": "软件与信息技术服务"
+        },
+        {
+          "name": "三维天地",
+          "code": "sz301159",
+          "board": "创业板",
+          "marketCapYi": 25.9,
+          "listDate": "",
+          "industry": "软件与信息技术服务"
+        },
+        {
+          "name": "英方软件",
+          "code": "sh688435",
+          "board": "科创板",
+          "marketCapYi": 25.9,
+          "listDate": "",
+          "industry": "软件与信息技术服务"
+        },
+        {
+          "name": "嘉和美康",
+          "code": "sh688246",
+          "board": "科创板",
+          "marketCapYi": 24.9,
+          "listDate": "",
+          "industry": "软件与信息技术服务"
+        },
+        {
+          "name": "致远互联",
+          "code": "sh688369",
+          "board": "科创板",
+          "marketCapYi": 23.4,
+          "listDate": "",
+          "industry": "软件与信息技术服务"
+        }
+      ]
+    }
+  ]
+}
