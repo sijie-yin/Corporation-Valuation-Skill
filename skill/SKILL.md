@@ -84,7 +84,7 @@ T = 商业化窗口（典型 2 年）；r = 当期无风险利率
 ```
 
 ### 校验案例
-WHartTest（2026-11-10）：1080 star / 181 fork（fork比16.8%）→ 算法B＋BSM(S=8M, K=1.5M, σ=50%, T=2y, r=4%) → Call 6.6M × 折扣0.612 ≈ 4.1M美元，区间 1.6-6.5M。
+某开源项目（2026-11-10）：1082 star / 180 fork（fork比16.8%）→ 算法B＋BSM(S=8M, K=1.5M, σ=50%, T=2y, r=4%) → Call 6.6M × 折扣0.612 ≈ 4.1M美元，区间 1.6-6.5M。
 
 ### 信源
 Linux基金会×Serena《State of Commercial Open Source》2025-08；a16z 2019-10；Redpoint 2023-03；saasvaluation.io。倍数随市况波动，测算日须当日核验。
